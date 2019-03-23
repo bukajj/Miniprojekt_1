@@ -2,9 +2,18 @@ h1 { /**/
 	text-align: center;
 	font-family: Arial;
 	font-size: 500%;
+	color: white;
 }
 .icons{
 	text-align: right;
+}
+.background{
+	background: white;
+	background-size: cover;
+}
+body{
+	background: url(tło.jpg); 
+  	background-size: cover;
 }
 /*animacja przycisku menu*/
 .container {
@@ -31,7 +40,7 @@ h1 { /**/
 /*koniec animacji przycisku menu*/
 
 .button {
-  	background-color: powderblue;
+  	background-color: #33adff;
   	border-radius: 10px;
   	border: none;
   	color: white;
@@ -44,24 +53,21 @@ h1 { /**/
 }
 
 /*animacja menu*/
-#panel, #flip {
+#panel,#flip {
 	text-align: center;
-	padding: 5px;
-  	background-color: powderblue;
+	width: 100%;
+  	background-color: #33adff;
   	border: none;
   	border-radius: 10px;
   	color: white;
   	text-decoration: none;
   	display: inline-block;
-  	font-size: 16px;
+  	font-size: 20px;
 }
 
-
-#panel {
-  padding: 50px;
-  display: none;
+#panel{
+	display: none;
 }
-
 .menu {
 	text-align: center;
 }
