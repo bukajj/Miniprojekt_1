@@ -1,7 +1,7 @@
 h1 { /**/
 	text-align: center;
 	font-family: Arial;
-	font-size: 500%;
+	font-size: 300%;
 	color: white;
 }
 .icons{
@@ -9,7 +9,19 @@ h1 { /**/
 }
 .background{
 	background: white;
-	background-size: cover;
+	background-size: 100%;
+}
+
+.footer{
+	width: 100%;
+	bottom: 10px;
+	text-align: center;
+	font-family: Arial;
+	color: white;
+	text-decoration: none;
+  	display: inline-block;
+
+
 }
 body{
 	background: url(tło.jpg); 
@@ -71,3 +83,91 @@ body{
 .menu {
 	text-align: center;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.center {
+  border: 1px solid red;
+  padding: 15px;
+}
+
+
+li{
+	list-style-type: none;
+}
+
+
+
+.right1 {
+	margin-right: 10px;
+  	width: 68%;
+  	float: right;
+  	padding: 15px 15px;
+  	margin-bottom: 7px;
+  	background-color: white;
+  	border-radius: 5px;
+  	color: #33adff;
+  	font-family: Arial;
+  	font-size: 16px;
+  	text-align: center;
+  	
+}
+
+.left2{
+	margin-left: 10px;
+	width: 30%;
+  	float: left;
+  	padding: 8px;
+  	margin-bottom: 7px;
+  	background-color: white;
+  	border-radius: 5px;
+  	color: #33adff;
+  	font-family: Arial;
+  	font-size: 16px;
+  	text-align: center;
+  }
+
+.left1{
+	margin-left: 10px;
+	width: 30%;
+  	float: left;
+  	padding: 8px;
+  	margin-bottom: 7px;
+  	background-color: #33adff;
+  	border-radius: 5px;
+  	color: white;
+  	font-family: Arial;
+  	font-size: 16px;
+  	text-align: center;
+}
+
+.right2{
+	margin-right: 10px;
+  	width: 68%;
+  	float: right;
+  	padding: 15px 15px;
+  	margin-bottom: 7px;
+  	background-color: #33adff;
+  	border-radius: 5px;
+  	color: white;
+  	font-family: Arial;
+  	font-size: 16px;
+  	text-align: center;
+}
+
+.left3{
+	margin-left: 10px;
+	width: 30%;
+  	float: left;
+  	padding: 8px;
+  	margin-bottom: 7px;
+  	background-color: grey;
+  	border-radius: 5px;
+  	color: white;
+  	font-family: Arial;
+  	font-size: 16px;
+  	text-align: center;
+}
+
