@@ -12,13 +12,18 @@
  			});
 		});
 	</script>
+    <script>
+        function myFunction(x) {
+  		x.classList.toggle("change");
+        }
+    </script>
 </head>
 <body>
 	<div class="icons">
 		<a href="strona_glowna.html"><img src="flaga_polska.jpg" height="30" width="50" alt="PL"></a>
 		<a href="main_page.html"><img src="flaga_brytyjska.jpg" height="30" width="50" alt="ENG"></a>
 	</div>
-	<h1>Kontakt</h1>
+	<h1>Zapisz się na listę kontaktową!</h1>
 	<div class="menu">
 		<div id="flip">
 			<div class="container" onclick="myFunction(this)">
@@ -27,33 +32,26 @@
   				<div class="bar3"></div>
 			</div>
 		</div>
-		<script>
-			function myFunction(x) {
-  			x.classList.toggle("change");
-			}
-		</script>
 		<div id="panel">
-			<a href="strona_glowna.html"><div class="button">Strona główna</div></a><br>
-			<a href="cv_pl.html"><div class="button">CV</div></a><br>
-			<a href="kontakt.html"><div class="button">Kontakt</div></a>
-		</div>
-	</div>
-	<div class="background">
+            <div id="main"><a href="strona_glowna.html"><div class="button">Strona główna</div></a><br></div>
+            <div id="cvl"><a href="cv_pl.html"><div class="button">CV</div></a><br></div>
+            <div id="contact"><a href="kontakt.html"><div class="button">Kontakt</div></a></div>
+        </div>
+    </div>
+	<div class="row">
 		<form>
-  			First name:<br>
-  			<input type="text" name="firstname" value="" required>
-  			<br>
-  			Last name:<br>
-  			<input type="text" name="lastname" value="" required>
-  			<br><br>
-  			<input type="submit" value="Submit">
+  			<div class="name"><div class="col-2"><input type="text" name="firstname" placeholder="imię" value="" required></div></div>
+  			<div class="lastname"><div class="col-2"><input type="text" name="lastname" placeholder="nazwisko" value="" required></div></div>
+            <div class="email"><div class="col-2"></div></div>
+            <div class="text"><div class="col-4"></div></div>
+            <div class="submit"><div class="col-2"><input type="submit" value="Submit"></div></div>	
 		</form> 
 	</div><br>
 	<div class="footer">
 		<h3>Jakub Jadwiszczak</h3>
 		<h4>E-mail: jakub.jadwiszczak.96@gmail.com</h4>
 		<h4>Tel: +48 606-281-027</h4>
-		<center></center><a href="https://www.facebook.com/jakub.jadwiszczak.1"><img src="fb.jpg" height="30" width="30"></a>
+		<center><a href="https://www.facebook.com/jakub.jadwiszczak.1"><img src="fb.jpg" height="30" width="30"></a>
 		<a href="https://www.linkedin.com/in/j-jadwiszczak"><img src="linkedin.jpg" height="35" width="35"></a>
 		<a href="https://github.com/bukajj" id="github"><img src="github.jpg" height="30" width="30"></a></center>
 	</div>
