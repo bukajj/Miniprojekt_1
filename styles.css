@@ -8,8 +8,14 @@ h1 { /**/
 	text-align: right;
 }
 .background{
-	background: white;
-	background-size: 100%;
+	background-size: 100%; 
+	background-color: rgba(255, 255, 255, 0.8);
+  	border-radius: 10px;
+  	color: rgba(71, 162, 255, 1.0);
+  	font-family: Arial;
+  	font-size: 16px;
+  	text-align: center;
+
 }
 
 .footer{
@@ -51,8 +57,9 @@ body{
 .change .bar3 {opacity: 0;}
 /*koniec animacji przycisku menu*/
 
+
 .button {
-  	background-color: #33adff;
+  	background-color: rgba(71, 162, 255, 1);
   	border-radius: 10px;
   	border: none;
   	color: white;
@@ -68,7 +75,7 @@ body{
 #panel,#flip {
 	text-align: center;
 	width: 100%;
-  	background-color: #33adff;
+  	background-color: rgba(71, 162, 255, 1);
   	border: none;
   	border-radius: 10px;
   	color: white;
@@ -106,9 +113,9 @@ li{
   	float: right;
   	padding: 15px 15px;
   	margin-bottom: 7px;
-  	background-color: white;
+  	background-color: rgba(255, 255, 255, 0.8);
   	border-radius: 5px;
-  	color: #33adff;
+  	color: rgba(71, 162, 255, 1.0);
   	font-family: Arial;
   	font-size: 16px;
   	text-align: center;
@@ -121,9 +128,9 @@ li{
   	float: left;
   	padding: 8px;
   	margin-bottom: 7px;
-  	background-color: white;
+  	background-color: rgba(255, 255, 255, 0.8);
   	border-radius: 5px;
-  	color: #33adff;
+  	color: rgba(71, 162, 255, 1.0);
   	font-family: Arial;
   	font-size: 16px;
   	text-align: center;
@@ -135,7 +142,7 @@ li{
   	float: left;
   	padding: 8px;
   	margin-bottom: 7px;
-  	background-color: #33adff;
+  	background-color: rgba(71, 162, 255, 0.5);
   	border-radius: 5px;
   	color: white;
   	font-family: Arial;
@@ -147,9 +154,9 @@ li{
 	margin-right: 10px;
   	width: 68%;
   	float: right;
-  	padding: 15px 15px;
+  	padding: 8px;
   	margin-bottom: 7px;
-  	background-color: #33adff;
+  	background-color: rgba(71, 162, 255, 0.5);
   	border-radius: 5px;
   	color: white;
   	font-family: Arial;
@@ -163,7 +170,7 @@ li{
   	float: left;
   	padding: 8px;
   	margin-bottom: 7px;
-  	background-color: grey;
+  	background-color: rgba(100, 100, 100, 0.5); 
   	border-radius: 5px;
   	color: white;
   	font-family: Arial;
@@ -171,3 +178,4 @@ li{
   	text-align: center;
 }
 
+ul:hover{background-color:  rgba(0, 0, 0, 1); }
