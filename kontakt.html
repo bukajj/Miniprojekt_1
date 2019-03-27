@@ -6,14 +6,17 @@
 	<title>O mnie</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script> 
-		$(document).ready(function(){
-  			$("#flip").click(function(){
+		$(document).ready(function()
+        {
+  			$("#flip").click(function()
+            {
     			$("#panel").slideToggle(400);
  			});
 		});
 	</script>
     <script>
-        function myFunction(x) {
+        function toggleFunction(x) 
+        {
   		x.classList.toggle("change");
         }
     </script>
@@ -26,7 +29,7 @@
 	<h1>Zapisz się na listę kontaktową!</h1>
 	<div class="menu">
 		<div id="flip">
-			<div class="container" onclick="myFunction(this)">
+			<div class="container" onclick="toggleFunction(this)">
  				<div class="bar1"></div>
   				<div class="bar2"></div>
   				<div class="bar3"></div>
@@ -40,11 +43,11 @@
     </div>
 	<div class="row">
 		<form>
-  			<div class="name"><div class="col-2"><input type="text" name="firstname" placeholder="imię" value="" required></div></div>
-  			<div class="lastname"><div class="col-2"><input type="text" name="lastname" placeholder="nazwisko" value="" required></div></div>
-            <div class="email"><div class="col-2"></div></div>
-            <div class="text"><div class="col-4"></div></div>
-            <div class="submit"><div class="col-2"><input type="submit" value="Submit"></div></div>	
+  			<div class="name"><div class="col-2"><input type="text" id="firstname" placeholder="imię" value="" required></div></div>
+  			<div class="lastname"><div class="col-2"><input type="text" id="lastname" placeholder="nazwisko" value="" required></div></div>
+            <div class="email"><input type="email" id="email" placeholder="twój email" value="" required><div class="col-2"></div></div>
+            <div class="text"><textarea id="message" rows="10" cols="30" placeholder="Wpisz temat/problem jaki chcesz poruszyć..." value="" required></textarea><div class="col-4"></div></div>
+            <div class="submit"><div class="col-2"><input type="submit" value="Submit" id="submit"></div></div>	
 		</form> 
 	</div><br>
 	<div class="footer">
