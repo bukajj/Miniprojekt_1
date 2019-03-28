@@ -13,10 +13,21 @@
     			$("#panel").slideToggle(400);
  			});
 		});
-	
+        
         function toggleFunction(x) 
         {
   		x.classList.toggle("change");
+        }
+        
+        function validateForm() {
+            var name = document.forms["myForm"]["firstname"].value;
+            var lastname = document.forms["myForm"]["lastname"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var message = document.forms["myForm"]["message"].value;
+            if (name == "" || lastname=="" || email=="" || message=="") {
+                alert("Form must be filled out");
+                return false;
+            }
         }
     </script>
 </head>
@@ -41,12 +52,12 @@
         </div>
     </div>
 	<div class="row">
-		<form>
+		<form name="myForm" onsubmit="return validateForm()" method="post">
             <div id="columns">
-  			<div class="col-2"><input type="text" id="firstname" placeholder="imię" value="" required></div>
-  			<div class="col-2"><input type="text" id="lastname" placeholder="nazwisko" value="" required></div>
-            <div class="col-2"><input type="email" id="email" placeholder="twój email" value="" required></div>
-            <div class="col-4"><textarea id="message" rows="2" cols="45" placeholder="Wpisz temat/problem jaki chcesz poruszyć..." value="" required></textarea></div>
+  			<div class="col-2"><input type="text" name="firstname" placeholder="imię" value=""></div>
+  			<div class="col-2"><input type="text" name="lastname" placeholder="nazwisko" value=""></div>
+            <div class="col-2"><input type="email" name="email" placeholder="twój email" value="" ></div>
+            <div class="col-4"><textarea name="message" rows="2" cols="45" placeholder="Wpisz temat/problem jaki chcesz poruszyć..." value="" ></textarea></div>
             <div class="col-2"><input type="submit" value="Submit" id="submit"></div>
             </div>
 		</form> 
