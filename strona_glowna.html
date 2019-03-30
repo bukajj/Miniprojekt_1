@@ -16,16 +16,29 @@
   		x.classList.toggle("change");
         }
     </script>
+    <script type="text/javascript">
+        function getDate(){
+            var Today = new Date();
+            var Month = Today.getMonth()+1;
+            var Day = Today.getDate();
+            var Year = Today.getFullYear();
+            if(Month<10)
+                Month="0"+Month;
+            if(Year <= 99)    Year += 1900
+                return  Day + "-" + Month + "-" + Year;
+        }
+</script>
 </head>
 <body>
+    <div class="date"><script type="text/javascript">document.write("Dzisiaj jest " + getDate())</script></div>
 	<div class="icons">
 		<a href="strona_glowna.html"><img src="flaga_polska.jpg" height="30" width="50" alt="PL"></a>
 		<a href="main_page.html"><img src="flaga_brytyjska.jpg" height="30" width="50" alt="ENG"></a>
 	</div>
 	<h1>Jakub Jadwiszczak</h1>
 	<div class="menu">
-		<div id="flip">
-			<div class="container" onclick="myFunction(this)">
+		<div id="flip" onclick="myFunction(this)">
+			<div class="container" >
  				<div class="bar1"></div>
   				<div class="bar2"></div>
   				<div class="bar3"></div>
