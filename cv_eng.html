@@ -5,7 +5,15 @@
 	<link rel="stylesheet" href="styles.css">
 	<title>CV</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script> 
+	 <script language="JavaScript" type="text/javascript">
+        function clock(){
+            date = (new Date()).toLocaleString();
+    
+            document.getElementById('date').innerHTML=date;
+            setTimeout("clock()", 1000);
+        } 
+    </script>
+    <script> 
 		$(document).ready(function(){
   			$("#flip").click(function(){
     			$("#panel").slideToggle(400);
@@ -17,24 +25,25 @@
         }
     </script>
 </head>
-<body>
+<body onload="javascript:clock()">
+    <div id="date"></div>
 	<div class="icons">
 		<a href="strona_glowna.html"><img src="flaga_polska.jpg" height="30" width="50" alt="PL"></a>
 		<a href="main_page.html"><img src="flaga_brytyjska.jpg" height="30" width="50" alt="ENG"></a>
 	</div>
 	<h1>Jakub Jadwiszczak</h1>
 	<div class="menu">
-		<div id="flip">
-			<div class="container" onclick="myFunction(this)">
+		<div id="flip" onclick="myFunction(this)">
+			<div class="container">
  				<div class="bar1"></div>
   				<div class="bar2"></div>
   				<div class="bar3"></div>
 			</div>
 		</div>
 		<div id="panel">
-            <div id="main"><a href="strona_glowna.html"><div class="button">Strona główna</div></a><br></div>
-            <div id="cvl"><a href="cv_pl.html"><div class="button">CV</div></a><br></div>
-            <div id="contact"><a href="kontakt.html"><div class="button">Kontakt</div></a></div>
+            <div id="main"><a href="main_page.html"><div class="button">Main page</div></a><br></div>
+            <div id="cvl"><a href="cv_eng.html"><div class="button">CV</div></a><br></div>
+            <div id="contact"><a href="contact.html"><div class="button">Contact</div></a></div>
         </div>
     </div>
 	<div class="background">

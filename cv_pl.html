@@ -5,7 +5,15 @@
 	<link rel="stylesheet" href="styles.css">
 	<title>CV</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script> 
+	 <script language="JavaScript" type="text/javascript">
+        function clock(){
+            date = (new Date()).toLocaleString();
+    
+            document.getElementById('date').innerHTML=date;
+            setTimeout("clock()", 1000);
+        } 
+    </script>
+    <script> 
 		$(document).ready(function(){
   			$("#flip").click(function(){
     			$("#panel").slideToggle(400);
@@ -22,15 +30,16 @@
         }
     </script>
 </head>
-<body>
+<body onload="javascript:clock()">
+    <div id="date"></div>
 	<div class="icons">
 		<a href="strona_glowna.html"><img src="flaga_polska.jpg" height="30" width="50" alt="PL"></a>
 		<a href="main_page.html"><img src="flaga_brytyjska.jpg" height="30" width="50" alt="ENG"></a>
 	</div>
 	<h1>Jakub Jadwiszczak</h1>
 	<div class="menu">
-		<div id="flip">
-			<div class="container" onclick="myFunction(this)">
+		<div id="flip" onclick="myFunction(this)">
+			<div class="container">
  				<div class="bar1"></div>
   				<div class="bar2"></div>
   				<div class="bar3"></div>
@@ -52,7 +61,14 @@
 		</div></div>
 		<div class="exp"><div class="col-8">
 			<h2>Doświadczenie</h2>
-			<p><b>Młodszy specjalista ds. monitorowania systemów IT |KRD BIG S.A. | 07/2018-03/2019</b></p>
+			<p><b>Tester oprogramowania |Teleste Video Networks Sp.z o.o. | 03/2019-obecnie</b></p>
+			<ul>
+				<li>Przeprowadzanie testów manualnych</li>
+				<li>Przeprowadzanie testów automatycznych przy użyciu Ranorex Studio</li>
+				<li>Odtwarzanie będów</li>
+				<li>Tworzenie nowych przypadków testowych</li>
+			</ul><br>
+            <p><b>Młodszy specjalista ds. monitorowania systemów IT |KRD BIG S.A. | 07/2018-03/2019</b></p>
 			<ul>
 				<li>Monitorowanie pracy systemów IT</li>
 				<li>Zgłaszanie błędów i awarii</li>
@@ -60,13 +76,6 @@
 				<li>Naprawa błędów</li>
 				<li>Pisanie zapytań w SQL</li>
 				<li>Praca z narzędziami takimi jak: MS SQL Server, Jira, EA, logFaces</li>
-			</ul><br>
-			<p><b>Tester oprogramowania |Teleste Video Networks Sp.z o.o. | 03/2019-obecnie</b></p>
-			<ul>
-				<li>Przeprowadzanie testów manualnych</li>
-				<li>Przeprowadzanie testów automatycznych przy użyciu Ranorex Studio</li>
-				<li>Odtwarzanie będów</li>
-				<li>Tworzenie nowych przypadków testowych</li>
 			</ul><br>
 		</div></div>
 		<div class="lang"><div class="col-4">

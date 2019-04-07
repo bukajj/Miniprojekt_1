@@ -3,9 +3,17 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="styles.css">
-	<title>O mnie</title>
+	<title>Kontakt</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script> 
+	 <script language="JavaScript" type="text/javascript">
+        function clock(){
+            date = (new Date()).toLocaleString();
+    
+            document.getElementById('date').innerHTML=date;
+            setTimeout("clock()", 1000);
+        } 
+    </script>
+    <script> 
 		$(document).ready(function()
         {
   			$("#flip").click(function()
@@ -18,7 +26,8 @@
         {
   		x.classList.toggle("change");
         }
-        
+    </script>
+    <script> 
         function validateForm() {
             var name = document.forms["myForm"]["firstname"].value;
             var lastname = document.forms["myForm"]["lastname"].value;
@@ -31,15 +40,16 @@
         }
     </script>
 </head>
-<body>
+<body onload="javascript:clock()">
+    <div id="date"></div>
 	<div class="icons">
 		<a href="strona_glowna.html"><img src="flaga_polska.jpg" height="30" width="50" alt="PL"></a>
 		<a href="main_page.html"><img src="flaga_brytyjska.jpg" height="30" width="50" alt="ENG"></a>
 	</div>
 	<h1>Zapisz się na listę kontaktową!</h1>
 	<div class="menu">
-		<div id="flip">
-			<div class="container" onclick="toggleFunction(this)">
+		<div id="flip" onclick="toggleFunction(this)">
+			<div class="container" >
  				<div class="bar1"></div>
   				<div class="bar2"></div>
   				<div class="bar3"></div>
@@ -52,15 +62,16 @@
         </div>
     </div>
 	<div class="row">
+        <div id="columns">
 		<form name="myForm" onsubmit="return validateForm()" method="post">
-            <div id="columns">
-  			<div class="col-2"><input type="text" name="firstname" placeholder="imię" value=""></div>
-  			<div class="col-2"><input type="text" name="lastname" placeholder="nazwisko" value=""></div>
-            <div class="col-2"><input type="email" name="email" placeholder="twój email" value="" ></div>
-            <div class="col-4"><textarea name="message" rows="2" cols="45" placeholder="Wpisz temat/problem jaki chcesz poruszyć..." value="" ></textarea></div>
-            <div class="col-2"><input type="submit" value="Submit" id="submit"></div>
-            </div>
+            
+  			<div class="col-12"><input type="text" id="firstname" placeholder="imię" value=""></div>
+  			<div class="col-12"><input type="text" id="lastname" placeholder="nazwisko" value=""></div>
+            <div class="col-12"><input type="email" id="email" placeholder="twój email" value="" ></div>
+            <div class="col-12"><textarea id="message" rows="2" cols="45" placeholder="Wpisz temat/problem jaki chcesz poruszyć..." value="" ></textarea></div>
+            <div class="col-12"><input type="submit" value="Submit" id="submit"></div>      
 		</form> 
+        </div>
 	</div><br>
 	<div class="footer">
 		<h3>Jakub Jadwiszczak</h3>
