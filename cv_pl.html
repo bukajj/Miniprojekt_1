@@ -29,6 +29,16 @@
   		x.classList.toggle("change");
         }
     </script>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 </head>
 <body onload="javascript:clock()">
     <div id="date"></div>
@@ -109,7 +119,74 @@
 			</ul>
 		</div></div>
 		<div id="cv"><a href="cv_pl.pdf" download="cv_pl.pdf"><div class="download"><div class="col-8"><h2>Pobierz CV</h2></div></div></a></div>
-	</div><br>
+        </div><br>
+       
+        <center><table>
+             <input id="myInput" type="text" placeholder="Search..">
+            <thead>
+            <tr>
+                <th>Narzędzie</th>
+                <th>Poziom opanowania(1-5)</th>
+            </tr></thead>
+            <tbody id="myTable">
+            <tr>
+                <td>Java</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>C++</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Django</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>JS</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>JQery</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Scala</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>GIT</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Jira</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Testy manualne</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Testy automatyczne</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Jenkins</td>
+                <td>3</td>
+            </tr>
+            </tbody>
+        </table></center>
 	<div class="footer">
 		<h3>Jakub Jadwiszczak</h3>
 		<h4>E-mail: jakub.jadwiszczak.96@gmail.com</h4>
