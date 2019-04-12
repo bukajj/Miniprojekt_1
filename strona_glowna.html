@@ -25,6 +25,21 @@
   		x.classList.toggle("change");
         }
     </script>
+    <script>
+        $(document).ready(function(){
+            $("#click").click(function(){
+                if ($("#click").val() == 'Szary'){
+                    $("#mp").css("background-color","rgba(100, 100, 100, 0.5)");
+                    $("#mp").css("color","white");
+                    $("#click").val("Biały");
+                } else{
+                    $("#mp").css("background-color","rgba(255,255,255,0.8)");
+                    $("#mp").css("color","rgba(60,110,235,1)");
+                    $("#click").val("Szary");
+                }
+            });
+        });
+    </script>
 </head>
 <body onload="javascript:clock()">
     <div id="date"></div>
@@ -48,9 +63,22 @@
         </div>
     </div>
 	<div class="row">
-        <div id="mp">
+        <div  id="mp">
             <img src="jj.jpg" class="col-2">
-        </div>
+            <article class="col-9">
+                <h2>O mnie:</h2>
+                <p>Studiuję informatykę na Politechnice Opolskiej oraz pracuję jako tester oprogramownia w Teleste Video Networks Sp. z o.o. Pracuję i mieszam we Wrocławiu.</p>
+                <h3>O mojej pracy:</h3>
+                <p>Aktuanie pracuję jako tester. Tworzę przypadki testowe, testy automatyczne, testuję oprogramowanie, szukam i raportuję błędy, oraz współpracuję z programistami. Głównie zajmuję się testowaniem aplikacji webowych oraz systemów opartych o domeny CCTV oraz GIS. Mam także doświadczenie w pracy przy utrzymaniu systemów IT, głównie baz i hurtowni danych, ale także komponentów webowych. </p>
+                <h3>Edukacja:</h3>
+                <p>Swoją przygodę z informatyką rozpocząłem na Politechnice Wrocławskiej. Chcąc rozwijać swoją wiedzę także w praktyce postanowiłem podjąć pracę. Po niecałym roku doszedłem do wniosku, że nie jestem w stanie łączyć studiów dziennych z pracą na pełen etat, stąd decyzja o porzeniesieniu na Politechnikę Opolską na studia niestacjonarne. Uczę się jednak nie tylko poprzez pracę i studiowanie, ale również sam swój warsztat. Głównie jest to programowanie w Pythonie oraz algorytmika, co wiąże się z moimi zainteresowaniami.</p>
+                <h3>IT hobby:</h3>
+                <p>Interesuje mnie sztuczna inteligncja, programowanie oraz algorytmika. Lubię programowanie w Pythonie oraz Scali i Ocamlu. Jeśli chodzi o algorytmikę, uważam że najciekawsze są algorytmy ewolucyjne. Interesuję się także nowinkami IT oraz uwielbiam podcasty programistyczne takie jak DevTalk, Stacja IT  czy Developer Tea.</p>
+                <h3>Hobby</h3>
+                <p>Interesuję się głównie historią i finansami. Uwielbiam historię obu wojen światowych. Lubię także czytać książki, najbardziej fantastykę i kryminał.</p>
+        </article>
+            <div class="col-2"><input type="button" onclick="change()" value="Szary" id="click"></div>
+            </div>
 	</div><br>
 	<footer class="footer">
 		<h3>Jakub Jadwiszczak</h3>

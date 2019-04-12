@@ -1,27 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="pl" dir="ltr">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="styles.css">
-	<title>Kontakt</title>
+	<title>Contact</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	 <script language="JavaScript" type="text/javascript">
         function clock(){
             date = (new Date()).toLocaleString();
-    
             document.getElementById('date').innerHTML=date;
             setTimeout("clock()", 1000);
         } 
     </script>
     <script> 
-		$(document).ready(function(){
-  			$("#flip").click(function(){
+		$(document).ready(function()
+        {
+  			$("#flip").click(function()
+            {
     			$("#panel").slideToggle(400);
  			});
 		});
-	
-        function myFunction(x) {
+        
+        function toggleFunction(x) 
+        {
   		x.classList.toggle("change");
+        }
+    </script>
+    <script> 
+        function validateForm() {
+            var name = document.forms["myForm"]["firstname"].value;
+            var lastname = document.forms["myForm"]["lastname"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var message = document.forms["myForm"]["message"].value;
+            if (name == "" || lastname=="" || email=="" || message=="") {
+                alert("Form must be filled out");
+                return false;
+            }
         }
     </script>
 </head>
@@ -31,10 +45,10 @@
 		<a href="strona_glowna.html"><img src="flaga_polska.jpg" height="30" width="50" alt="PL"></a>
 		<a href="main_page.html"><img src="flaga_brytyjska.jpg" height="30" width="50" alt="ENG"></a>
 	</div>
-	<h1>Contact</h1>
+	<h1>Sign to the contact list!</h1>
 	<div class="menu">
-		<div id="flip" onclick="myFunction(this)">
-			<div class="container">
+		<div id="flip" onclick="toggleFunction(this)">
+			<div class="container" >
  				<div class="bar1"></div>
   				<div class="bar2"></div>
   				<div class="bar3"></div>
@@ -46,10 +60,17 @@
             <div id="contact"><a href="contact.html"><div class="button">Contact</div></a></div>
         </div>
     </div>
-	<div class="background">
-		<p>
-			
-		</p>
+	<div class="row">
+        <div id="columns">
+		<form name="myForm" onsubmit="return validateForm()" method="post">
+            
+  			<div class="col-12"><input type="text" id="firstname" placeholder="firstname" value=""></div>
+  			<div class="col-12"><input type="text" id="lastname" placeholder="lastname" value=""></div>
+            <div class="col-12"><input type="email" id="email" placeholder="email" value="" ></div>
+            <div class="col-12"><textarea id="message" rows="2" cols="45" placeholder="Write the subjest you want to raise.. " value="" ></textarea></div>
+            <div class="col-12"><input type="submit" value="Submit" id="submit"></div>      
+		</form> 
+        </div>
 	</div><br>
 	<div class="footer">
 		<h3>Jakub Jadwiszczak</h3>
