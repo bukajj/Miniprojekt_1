@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head lang="en" dir="ltr">
@@ -42,9 +45,36 @@
 </head>
 <body onload="javascript:clock()">
     <div id="date"></div>
+          <?php
+            if(isset($_SESSION['login']))
+            {
+
+                echo '<div id="date">Zalogowany jest: '. $_SESSION['login'].'     </div>';
+                // Rozumiem, że tu ma nastąpić połączenie z bazą danych i wybranie pól z tabeli "users" która dotyczy zalogowanego użytkownika.
+                // Tutaj powinien znajdować się formularz z "przeklejonymi" danymi
+            }
+
+            else
+                {
+                    echo '<div id="date">Żaden użytkownik nie jest zalogowany     </div>';
+                }
+        ?>
+        <center>
+        <?php
+                if(isset($_SESSION['login']))
+                {
+                    echo '<a href="logout.php"><input type="submit" value="Log out"></a>';
+                }
+                else
+                {
+                    echo '<a href="login.php"><input type="submit" value="Log in"></a>';
+                    echo '<a href="register.php"><input type="submit" value="Register"></a>';
+                }
+        ?>
+        </center>
 	<div class="icons">
-		<a href="strona_glowna.html"><img src="flaga_polska.jpg" height="30" width="50" alt="PL"></a>
-		<a href="main_page.html"><img src="flaga_brytyjska.jpg" height="30" width="50" alt="ENG"></a>
+		<a href="strona_glowna.php"><img src="flaga_polska.jpg" height="30" width="50" alt="PL"></a>
+		<a href="main_page.php"><img src="flaga_brytyjska.jpg" height="30" width="50" alt="ENG"></a>
 	</div>
 	<h1>Jakub Jadwiszczak</h1>
 
@@ -57,9 +87,9 @@
 			</div>
 		</div>
 		<div id="panel">
-            <div id="main"><a href="main_page.html"><div class="button">Main page</div></a><br></div>
-            <div id="cvl"><a href="cv_eng.html"><div class="button">CV</div></a><br></div>
-            <div id="contact"><a href="contact.html"><div class="button">Contact</div></a></div>
+            <div id="main"><a href="main_page.php"><div class="button">Main page</div></a><br></div>
+            <div id="cvl"><a href="cv_eng.php"><div class="button">CV</div></a><br></div>
+            <div id="contact"><a href="contact.php"><div class="button">Contact</div></a></div>
         </div>
     </div>
 	<div class="row">

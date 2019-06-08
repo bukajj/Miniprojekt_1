@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">
 <head>
@@ -41,9 +44,36 @@
 </head>
 <body onload="javascript:clock()">
     <div id="date"></div>
+          <?php
+            if(isset($_SESSION['login']))
+            {
+
+                echo '<div id="date">Zalogowany jest: '. $_SESSION['login'].'     </div>';
+                // Rozumiem, że tu ma nastąpić połączenie z bazą danych i wybranie pól z tabeli "users" która dotyczy zalogowanego użytkownika.
+                // Tutaj powinien znajdować się formularz z "przeklejonymi" danymi
+            }
+
+            else
+                {
+                    echo '<div id="date">Żaden użytkownik nie jest zalogowany     </div>';
+                }
+        ?>
+        <center>
+        <?php
+                if(isset($_SESSION['login']))
+                {
+                    echo '<a href="logout.php"><input type="submit" value="Log out"></a>';
+                }
+                else
+                {
+                    echo '<a href="login.php"><input type="submit" value="Log in"></a>';
+                    echo '<a href="register.php"><input type="submit" value="Register"></a>';
+                }
+        ?>
+        </center>
 	<div class="icons">
-		<a href="strona_glowna.html"><img src="flaga_polska.jpg" height="30" width="50" alt="PL"></a>
-		<a href="main_page.html"><img src="flaga_brytyjska.jpg" height="30" width="50" alt="ENG"></a>
+		<a href="strona_glowna.php"><img src="flaga_polska.jpg" height="30" width="50" alt="PL"></a>
+		<a href="main_page.php"><img src="flaga_brytyjska.jpg" height="30" width="50" alt="ENG"></a>
 	</div>
 	<h1>Zapisz się na listę kontaktową!</h1>
 	<div class="menu">
@@ -55,20 +85,20 @@
 			</div>
 		</div>
 		<div id="panel">
-            <div id="main"><a href="strona_glowna.html"><div class="button">Strona główna</div></a><br></div>
-            <div id="cvl"><a href="cv_pl.html"><div class="button">CV</div></a><br></div>
-            <div id="contact"><a href="kontakt.html"><div class="button">Kontakt</div></a></div>
+            <div id="main"><a href="strona_glowna.php"><div class="button">Strona główna</div></a><br></div>
+            <div id="cvl"><a href="cv_pl.php"><div class="button">CV</div></a><br></div>
+            <div id="contact"><a href="kontakt.php"><div class="button">Kontakt</div></a></div>
         </div>
     </div>
 	<div class="row">
         <div id="columns">
-		<form name="myForm" onsubmit="return validateForm()" method="post">
+		<form name="myForm" onsubmit="return validateForm()" method="post" action=contact.php>
             
-  			<div class="col-12"><input type="text" id="firstname" placeholder="imię" value=""></div>
-  			<div class="col-12"><input type="text" id="lastname" placeholder="nazwisko" value=""></div>
-            <div class="col-12"><input type="email" id="email" placeholder="twój email" value="" ></div>
-            <div class="col-12"><textarea id="message" rows="2" cols="45" placeholder="Wpisz temat/problem jaki chcesz poruszyć..." value="" ></textarea></div>
-            <div class="col-12"><input type="submit" value="Submit" id="submit"></div>      
+  			<div class="col-12"><input type="text" name="firstname" placeholder="imię"></div>
+  			<div class="col-12"><input type="text" name="lastname" placeholder="nazwisko" ></div>
+            <div class="col-12"><input type="email" name="email" placeholder="twój email" ></div>
+            <div class="col-12"><textarea name="message" rows="2" cols="45" placeholder="Wpisz temat/problem jaki chcesz poruszyć..."  ></textarea></div>
+            <div class="col-12"><input type="submit" value="Submit" name="submit"></div>      
 		</form> 
         </div>
 	</div><br>
